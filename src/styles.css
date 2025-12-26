@@ -1,0 +1,294 @@
+:root {
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji",
+    "Segoe UI Emoji";
+  color-scheme: light;
+  color: #101114;
+  background: #f6f7fb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.appShell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 18px;
+  background: #ffffff;
+  border-bottom: 1px solid #e7e9f2;
+  gap: 16px;
+}
+
+.brandTitle {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.brandSub {
+  font-size: 12px;
+  color: #5a6072;
+  margin-top: 2px;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+}
+
+.tab {
+  border: 1px solid #d7dbee;
+  background: #ffffff;
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.tab.active {
+  border-color: #9aa3c9;
+  background: #f1f3ff;
+}
+
+.content {
+  padding: 18px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+.panel {
+  background: #ffffff;
+  border: 1px solid #e7e9f2;
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 2px 12px rgba(16, 17, 20, 0.04);
+}
+
+.panel.wide {
+  grid-column: 1 / -1;
+}
+
+h2 {
+  margin: 0 0 12px 0;
+  font-size: 16px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 12px;
+  padding: 10px 0;
+  border-top: 1px solid #f0f2fa;
+}
+
+.row:first-of-type {
+  border-top: none;
+}
+
+.label {
+  color: #5a6072;
+  font-size: 13px;
+  padding-top: 2px;
+}
+
+.value {
+  font-size: 14px;
+}
+
+.hint {
+  grid-column: 2 / 3;
+  font-size: 12px;
+  color: #6b7288;
+  margin-top: 4px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  padding-top: 10px;
+}
+
+.primary,
+.secondary {
+  border-radius: 12px;
+  padding: 10px 14px;
+  cursor: pointer;
+  border: 1px solid #d7dbee;
+  background: #ffffff;
+}
+
+.primary {
+  background: #111827;
+  color: #ffffff;
+  border-color: #111827;
+}
+
+.primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.big {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.wrap {
+  word-break: break-word;
+}
+
+.muted {
+  color: #5a6072;
+  font-size: 13px;
+}
+
+.ok {
+  color: #0f766e;
+  font-size: 12px;
+  padding-top: 6px;
+}
+
+.warn {
+  color: #b45309;
+  font-size: 12px;
+  padding-top: 6px;
+}
+
+.pins {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: end;
+}
+
+.pinField {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 12px;
+  color: #5a6072;
+}
+
+.pinField input {
+  width: 90px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid #d7dbee;
+  font-size: 14px;
+}
+
+.codeEditor {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.pegSelect {
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid #d7dbee;
+  background: #ffffff;
+  font-size: 14px;
+}
+
+.codeString {
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid #eef0f8;
+  background: #f8f9ff;
+  font-size: 14px;
+}
+
+.history {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.historyItem {
+  padding: 10px 0;
+  border-top: 1px solid #f0f2fa;
+}
+
+.historyItem:first-child {
+  border-top: none;
+}
+
+.gridMeta {
+  display: flex;
+  gap: 16px;
+  padding: 10px 0 14px 0;
+  color: #5a6072;
+  font-size: 13px;
+}
+
+.codesGrid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.codeTile {
+  border-radius: 12px;
+  border: 1px solid #e7e9f2;
+  padding: 10px 8px;
+  text-align: center;
+}
+
+.okTile {
+  background: #f1fff8;
+  border-color: #c9f2dd;
+}
+
+.elimTile {
+  background: #fff7ed;
+  border-color: #fed7aa;
+}
+
+.tileSub {
+  font-size: 11px;
+  color: #6b7288;
+  margin-top: 4px;
+}
+
+.textInput {
+  width: 100%;
+  max-width: 980px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid #d7dbee;
+  font-size: 14px;
+}
+
+.figmaFrameWrap {
+  margin-top: 14px;
+  border: 1px solid #e7e9f2;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.figmaFrame {
+  width: 100%;
+  height: 70vh;
+  border: 0;
+}
+
+.footer {
+  padding: 14px 18px 22px 18px;
+}
